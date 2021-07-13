@@ -1,0 +1,37 @@
+a {
+      color:black;
+      text-decoration: none;
+    }
+    h1 {
+      font-size:45px;
+      text-align:center;
+      border-bottom:2px solid black;
+      margin:0;
+    }
+    #layer {
+      display:grid;
+      grid-template-columns: 200px 1fr;
+    }
+    #second {
+     display:grid;
+     padding-left:25px;
+    }
+    ul{
+      border-right:2px solid black;
+      margin:0;
+      padding:15px;
+    }
+    @media(max-width:800px){
+      #layer {
+        display: block;
+      }
+      ul{
+        border-right:none;
+      }
+      h2 {
+        border-bottom:none;
+      }
+      iframe {
+        width="500px" height="630" src="https://www.youtube.com/embed/oJ09xdxzIJQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      }
+    }
