@@ -24,8 +24,8 @@
     if(this.value === 'night'){
       target.style.backgroundColor = 'black';
       target.style.color = 'white';
-      document.querySelector('h1').border-bottom:2px solid pink;
-      document.querySelector('ul').border-right:2px solid pink;                                        
+      document.querySelector('h1').style.border-bottom:2px solid pink;
+      document.querySelector('ul').style.border-right:2px solid pink;                                        
       this.value = 'day';
                                               
       var alist = document.querySelectorAll('a');
@@ -38,8 +38,8 @@
     } else {
       target.style.backgroundColor = 'white';
       target.style.color = 'black';
-      document.querySelector('h1').border-bottom:2px solid black;
-      document.querySelector('ul').border-right:2px solid black;
+      document.querySelector('h1').style.border-bottom:2px solid black;
+      document.querySelector('ul').style.border-right:2px solid black;
       this.value = 'night';
                                                
       var alist = document.querySelectorAll('a');
