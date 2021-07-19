@@ -6,6 +6,35 @@
 <head>
 <title> 오버워치 </title>
 <meta charset='utf-8'>
+<script>
+  function NightDayHandler(self){
+   var target = document.querySelector('body');
+    if(self.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      self.value = 'day';
+                                              
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+          alist[i].style.color = 'pink';
+          i = i + 1;
+      }
+                                               
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      self.value = 'night';
+                                               
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+          alist[i].style.color = 'red';
+          i = i + 1;
+      }
+    }
+  }
+</script>
 <link rel="stylesheet" href="style.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-714NJVRREP"></script>
@@ -20,31 +49,7 @@
 
 <body>
   <input type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if(this.value === 'night'){
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      this.value = 'day';
-                                              
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-          alist[i].style.color = 'pink';
-          i = i + 1;
-      }
-                                               
-    } else {
-      target.style.backgroundColor = 'white';
-      target.style.color = 'black';
-      this.value = 'night';
-                                               
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-          alist[i].style.color = 'red';
-          i = i + 1;
-      }
-    }
+    NightDayHandler(this);
   ">
 <h1><a href="index.html">오버워치</a></h1>
 <div id="layer">
@@ -65,6 +70,9 @@
 </div>
 <p>
   <div id="disqus_thread"></div>
+  <input type="button" value="night" onclick="
+    NightDayHandler(this);
+  ">
 <script>
     /**
     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
